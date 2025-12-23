@@ -24,7 +24,7 @@
     body {
       width: 100%;
       max-width: 100vw;
-      min-height: 100vh;
+      min-height: 120vh;
       background: linear-gradient(180deg, #0a1628 0%, #1a2f4a 30%, #2d1f3f 70%, #1a0f2e 100%);
       background-attachment: fixed;
       display: flex;
@@ -35,6 +35,7 @@
       overflow-y: auto;
       position: relative;
       -webkit-overflow-scrolling: touch;
+      padding-bottom: 200px;
     }
 
     /* 筆記体署名 */
@@ -90,12 +91,12 @@
     /* メインコンテナ */
     .container {
       width: 100%;
-      min-height: 100vh;
+      min-height: 120vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 40px 20px;
+      padding: 40px 20px 250px 20px;
       position: relative;
       z-index: 10;
     }
@@ -576,9 +577,8 @@
       }
 
       .container {
-        padding: 20px 10px;
+        padding: 40px 10px 200px 10px;
         justify-content: flex-start;
-        padding-top: 40px;
       }
     }
 
@@ -659,7 +659,7 @@
       }
 
       .container {
-        padding: 35px 20px;
+        padding: 35px 20px 220px 20px;
       }
     }
 
@@ -677,7 +677,7 @@
       }
 
       .container {
-        padding: 50px 30px;
+        padding: 50px 30px 250px 30px;
       }
 
       .balloon:hover {
@@ -734,7 +734,7 @@
       }
 
       .container {
-        padding: 20px 10px;
+        padding: 20px 10px 150px 10px;
       }
     }
   </style>
@@ -887,7 +887,7 @@
       const documentHeight = document.documentElement.scrollHeight;
       
       // 下から100px以内にスクロールしたら表示
-      if (scrollTop + windowHeight >= documentHeight - 100) {
+      if (scrollTop + windowHeight >= documentHeight - 300) {
         signature.classList.add('visible');
       } else {
         signature.classList.remove('visible');
